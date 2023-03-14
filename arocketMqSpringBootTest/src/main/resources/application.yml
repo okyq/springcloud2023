@@ -1,0 +1,7 @@
+rocketmq:
+  name-server: 192.168.2.230:9876
+  producer:
+    group: group2
+
+server:
+  port: 3737
