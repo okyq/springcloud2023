@@ -14,7 +14,7 @@ spring:
     addresses: 101.43.57.111:5672
     virtual-host: /
 server:
-  port: 3355
+  port: 3366
 management:
   endpoints:
     web:

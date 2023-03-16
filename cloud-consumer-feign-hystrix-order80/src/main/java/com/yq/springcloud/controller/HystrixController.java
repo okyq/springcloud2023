@@ -36,15 +36,15 @@ public class HystrixController {
       * @date 2023/2/27
       * @return java.lang.String
       */
-//    @GetMapping("/consumer/payment/hystrix/timeout/{id}")
-//    @HystrixCommand(fallbackMethod = "paymentTimeOutFallbackMethod",commandProperties = {
-//            @HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds",value="1500")
-//    })
-//    public String paymentInfo_TimeOut(@PathVariable("id") Integer id) throws InterruptedException
-//    {
-//        String result = hystrixService.paymentInfoTimeOut(id);
-//        return result;
-//    }
+    @GetMapping("/consumer/payment/hystrix/timeout/{id}")
+    @HystrixCommand(fallbackMethod = "paymentTimeOutFallbackMethod",commandProperties = {
+            @HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds",value="1500")
+    })
+    public String paymentInfo_TimeOut(@PathVariable("id") Integer id) throws InterruptedException
+    {
+        String result = hystrixService.paymentInfoTimeOut(id);
+        return result;
+    }
 
     /**
       * @description: 直接报错,使用默认fallbakc方法
@@ -53,9 +53,9 @@ public class HystrixController {
       * @date 2023/2/27
       * @return java.lang.String
       */
-    @GetMapping("/consumer/payment/hystrix/timeout/{id}")
+    @GetMapping("/consumer/payment/hystrix/timeout/default/{id}")
     @HystrixCommand
-    public String paymentInfo_TimeOut(@PathVariable("id") Integer id) throws InterruptedException
+    public String paymentInfo_TimeOut_default(@PathVariable("id") Integer id) throws InterruptedException
     {
         int x = 1/0;
         String result = hystrixService.paymentInfoTimeOut(id);

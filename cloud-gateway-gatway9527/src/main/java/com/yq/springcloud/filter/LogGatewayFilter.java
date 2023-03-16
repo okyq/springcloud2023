@@ -31,6 +31,13 @@ public class LogGatewayFilter implements GlobalFilter, Ordered {
         return chain.filter(exchange);
     }
 
+    /**  
+      * @description: 加载过滤器顺序，数字越小，优先级越高
+      * @author yuqian
+      * @params []
+      * @date 2023/3/15
+      * @return int
+      */ 
     @Override
     public int getOrder() {
         return 0;

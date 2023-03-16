@@ -27,6 +27,8 @@
       <module>arocketMqSpringBootTest</module>
       <module>arabbitMq</module>
       <module>arabbitMqManualAck</module>
+      <module>cloud-config-client-3366</module>
+      <module>cloud-stream-rabbitmq-provider8801</module>
   </modules>
 <!--    <dependencies>-->
 <!--        <dependency>-->

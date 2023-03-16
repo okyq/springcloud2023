@@ -11,8 +11,14 @@ import org.junit.Test;
 public class TestOwn {
 
     @Test
+    public void testaa(){
+        System.out.println(2/1);
+    }
+
+    @Test
     public void mytest() {
         int[] arr = new int[]{2,3,12,55,4,51,23,76,45,15,8,1};
+        int[] arrSort = new int[]{1,3,5,8,9,12,16,18,20,22,45,58,59,67};
         //选择排序
         //selectionSort(x);、
 
@@ -26,10 +32,12 @@ public class TestOwn {
         //insertionSortDesc(arr);
 
         //插入排序：
-        insertionSortAsc(arr);
+        //insertionSortAsc(arr);
 
+        //二分查找
+        erfen(arrSort,9);
 
-        printArr(arr);
+        //printArr(arr);
     }
 
 
@@ -127,6 +135,40 @@ public class TestOwn {
                 swapArr(arr,j,j+1);
             }
         }
+    }
+
+    /**  
+      * @description: 二分查找
+      * @author yuqian
+      * @params [arr]
+      * @date 2023/3/14
+      * @return void
+      */ 
+    public static int erfen(int[] arr, int target){
+        int left = 0;
+        int right = arr.length - 1;
+        int result = -1;
+        int index = 0;
+        while (left <= right){
+            int mid = (left+right)/2;
+            if(arr[mid] == target){
+                result = 1;
+                index = mid;
+                break;
+            }
+            //在数组左边
+            else if(target<arr[mid]){
+                right = mid-1;
+            } else {
+                left = mid+1;
+            }
+        }
+        if(result == 1) {
+            System.out.println(target+"在数组中的位置是："+index);
+        } else {
+            System.out.println("没有找到");
+        }
+        return result;
     }
 
 
