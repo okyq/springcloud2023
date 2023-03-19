@@ -29,6 +29,9 @@
       <module>arabbitMqManualAck</module>
       <module>cloud-config-client-3366</module>
       <module>cloud-stream-rabbitmq-provider8801</module>
+      <module>cloudalibaba-provider-payment9001</module>
+    <module>cloudalibaba-provider-payment9002</module>
+    <module>cloudalibaba-consumer-nacos-order83</module>
   </modules>
 <!--    <dependencies>-->
 <!--        <dependency>-->
@@ -90,7 +93,7 @@
       <dependency>
         <groupId>com.alibaba.cloud</groupId>
         <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-        <version>2.1.0.RELEASE</version>
+        <version>2.2.0.RELEASE</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>

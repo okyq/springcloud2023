@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: test
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 101.43.57.111:2700 #配置Nacos地址
+      config:
+        server-addr: 101.43.57.111:2700
+        file-extension: yaml
+        group: TEST_GROUP
+        namespace: 648ca82c-a1e1-460c-9d13-a400245d259c

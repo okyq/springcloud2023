@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 101.43.57.111:2700 #配置Nacos地址
+      config:
+        server-addr: 101.43.57.111:2700
+        file-extension: yaml
